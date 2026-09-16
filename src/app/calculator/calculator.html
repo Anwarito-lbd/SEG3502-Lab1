@@ -1,0 +1,34 @@
+<table>
+  <tr>
+    <td>
+      <label for="premierNombre">Premier nombre:</label>
+    </td>
+    <td>
+      <input type="number" id="premierNombre" name="premierNombre" #premierNombre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="secondNombre">Second nombre:</label>
+    </td>
+    <td>
+      <input type="number" id="secondNombre" name="secondNombre" #secondNombre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="resultat">Resultat:</label>
+    </td>
+    <td>
+      <input id="resultat" name="resultat" readonly [value]="resultDisplay">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="button-group">
+      <button type="button" id="btn-add" (click)="add(premierNombre.value, secondNombre.value)">+</button>
+      <button type="button" id="btn-sub" (click)="subtract(premierNombre.value, secondNombre.value)">-</button>
+      <button type="button" id="btn-mul" (click)="multiply(premierNombre.value, secondNombre.value)">*</button>
+      <button type="button" id="btn-div" (click)="divide(premierNombre.value, secondNombre.value)">/</button>
+    </td>
+  </tr>
+</table>
